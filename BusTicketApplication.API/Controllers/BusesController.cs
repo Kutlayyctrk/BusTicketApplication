@@ -15,11 +15,10 @@ namespace BusTicketApplication.API.Controllers
         {
             _service = service;
         }
-        [HttpGet]
+        
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-           
             var buses = await _service.GetAllAsync();
             return Ok(buses);
 
